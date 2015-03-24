@@ -1,0 +1,48 @@
+<%inherit file="base.htm" />
+
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<title></title>
+</head>
+<body>
+
+<%block name="centerContent">
+	<table class="table table-hover table-bordered table-responsive">
+	<th>First Name</th>
+	<th>Last Name</th>
+	<th>Address 1</th>
+	<th>Address 2</th>
+	<th>City</th>
+	<th>State</th>
+	<th>Zip Code</th>
+	<th>Email</th>
+	<th>Birthday</th>
+	<th>Biographical Sketch</th>
+	<th>Emergency Contact Relationship</th>
+	<th>PhotoID</th>
+	<th>Appointment Date</th>
+	<th>Edit/Delete</th>
+		%for legalentity in legalentitys:
+			
+			<tr>
+			<td>${ legalentity.given_name }</td>
+			<td>${ legalentity.person.family_name }</td>
+			<td>${ legalentity.address1 }</td>
+			<td>${ legalentity.address2 }</td>
+			<td>${ legalentity.city }</td>
+			<td>${ legalentity.state }</td>
+			<td>${ legalentity.zip_code }</td>
+			<td>${ legalentity.email }</td>
+			<td>${ legalentity.creation_date }</td>
+			<td>${ legalentity.Person.Participant.biographical_sketch }</td>
+
+			<td><a href="/homepage/">Edit</a> | Delete</td>
+			</tr>
+		%endfor
+	</table>
+ </%block>
+</body>
+</html>
+

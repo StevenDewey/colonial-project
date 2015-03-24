@@ -1,0 +1,39 @@
+<%inherit file="base.htm" />
+
+  <%block name="leftContent">
+  <h1 style="text-align: center; "><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Welcome to the homepage app!</h1>
+  <ul class="nav nav-pills" role="tablist">
+  <li style="width: 100%" role="presentation" class="active"><a href="#">Pending Transactions <span class="badge">42</span></a></li>
+  <li style="width: 100%" role="presentation"><a href="#">Unfinshined Tickets<span class="badge">21</span></a></li>
+  <li style="width: 100%" role="presentation"><a href="#">Missed Calls <span class="badge">3</span></a></li>
+</ul>
+  
+        
+      </%block>
+    
+  
+
+  <%block name="centerContent">
+    <div class="content">
+      <h3><span class="label label-default">Wahoo!! -- youve successfully created a new django-mako-plus app!</span></h3>
+      <h4>Next Up: Go through the django-mako-plus tutorial and add Javascript, CSS, and urlparams to this page.</h4>
+    </div>
+	<div class="alert alert-danger" role="alert">
+		You are a fantastic person</div>
+    <%
+    	import random
+    	r = random.randint(10, 100)
+    %>
+    
+	<h1>${ r }</h1>
+
+	<button class="btn btn-success">This is cool</button>
+  <button type="button" class="btn btn-primary">This is primarily cooler</button>
+
+    %for i in range(50):
+    %if i % 2 ==0:
+    	<p>${ i }: welcome to my site</p>
+    %endif
+    %endfor
+
+  </%block>

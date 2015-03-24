@@ -1,0 +1,34 @@
+<%inherit file="base.htm" />
+
+<%block name="centerContent">
+<div class="text-right">
+		<input id="search"/> <button class="filter btn btn-info" >Search</button> <div id="results"></div>
+		## <a href="/homepage/product.create/" class="btn btn-warning" style="margin-bottom: 10px">Create New Product</a>
+</div>
+	<div class="tableContain">
+	<h1>Products</h1>
+	
+		<div id="DisplayProducts">
+			<div class="displaystuff">
+			%for product in products:
+				<div class="productstuff">
+					<div class="productDiv">
+						<a href="/product_detail/${ product.id }"><img src="${ product.photo }"/></a>
+						<div class="buyButton"><a href="/product_detail/${ product.id }">${ product.name }</a></div>
+						<p>Description: </p>${ product.description }<br>
+						<p>Price: </p>${ product.price } <br>
+						<div class="buyButton">
+							<button data-pid="${ product.id }" class="add_button btn btn-warning">Buy Now</button>
+
+						</div>
+					</div>
+
+				</div>
+								
+			%endfor
+			</div>
+		</div>
+		
+	</div>
+ </%block>
+

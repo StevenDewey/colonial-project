@@ -1,0 +1,44 @@
+h1 {
+	clear: left;
+	text-align: center;
+}
+
+
+#id_quantity {
+	width:50px;
+}
+
+.productDiv img{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	max-width: 300px;
+	max-height: 300px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.productDiv p {
+	display: inline;
+}
+
+.productDiv img + div {
+	display: inline-block;
+	margin-left: 35%;
+	margin-right: 35%;
+	width: 30%;
+}
+
+.center{
+	margin-top: 20px;
+	text-align: center;
+}
+
+.right{
+	float:right;
+}
+
+td img{
+	max-width: 50px;
+	max-height: 50px;
+}

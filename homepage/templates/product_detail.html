@@ -1,0 +1,32 @@
+<%inherit file="base.htm" />
+
+<html>
+<head>
+
+	<title></title>
+</head>
+<body>
+
+<%block name="centerContent">
+	<a href="/product"><button class="right btn btn-primary">Back To Products</button></a>
+	<h1> ${ product.name } <br> </h1>
+		<div class="productDiv">
+			<img src="${ product.photo }"/>
+			<div>
+				<p>Description: </p>${ product.description }<br>
+				<p>Price: </p>${ product.price }
+			</div>
+			<div class="center">
+				<form >
+					<label for="quantity">Qty: </label>
+					<input min="1" type="number" id="quantity" name="quantity" value="1" />
+				</form>
+				<button data-pid="${ product.id }" class="add_button btn btn-warning">Buy Now</button>
+			</div>
+		</div>
+		
+		
+ </%block>
+</body>
+</html>
+

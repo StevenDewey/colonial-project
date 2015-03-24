@@ -1,0 +1,25 @@
+<%inherit file="base.htm" />
+
+<%block name="centerContent">
+    <div class="content">
+      <h3>Wahoo!! -- youve successfully created a new django-mako-plus app!</h3>
+      <h4>Next Up: Go through the django-mako-plus tutorial and add Javascript, CSS, and urlparams to this page.</h4>
+    </div>
+	<div class="alert alert-danger" role="alert">
+		You are a fantastic person</div>
+<%
+	import random
+	r = random.randint(10, 100)
+%>
+	<h1>${ r }</h1>
+
+	<button class="btn btn-success">This is cool</button>
+
+
+    %for i in range(50):
+    %if i % 2 ==0:
+    	<p>${ i }: welcome to my site</p>
+    %endif
+    %endfor
+
+</%block>

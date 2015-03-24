@@ -1,0 +1,16 @@
+<%inherit file="base.htm" />
+
+<%block name="centerContent">
+
+    <a href="/homepage/index" class="cancel">Cancel</a>
+    <div class="content">
+        <form method="POST">
+            <table style="margin-top:37px;">
+                ${ form }
+                <img src="/static/homepage/media/productPictures/barrell.jpg" class="profile_pic" align="right"/>
+            </table>
+            <button type="submit">Submit</button>
+            <a href="/homepage/EditAccount.changePassword/${ user.id }/" >Change Username/Password</a>
+        </form>
+    </div>
+</%block>

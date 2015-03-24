@@ -1,0 +1,45 @@
+<%inherit file="base.htm" />
+
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<title></title>
+</head>
+<body>
+
+
+
+<%block name="centerContent">
+	<div class="text-right">
+		<a href="/homepage/rental.create/" class="btn btn-warning" style="margin-bottom: 10px">Create New Rental</a>
+	</div>
+	<div class="tableContain">
+	<h1>Rentals</h1>
+		<table class="table table-hover table-bordered table-responsive">
+		<th>ID</th>
+		<th>Rental Time</th>
+		<th>Discount Percent</th>
+		<th>Organization ID</th>
+		<th>Person ID</th>
+		<th>Agent ID</th>
+		<th>Edit | Delete</th>
+		
+			%for rental in rentals:
+				
+				<tr>
+				<td>${ rental.id }</td>
+				<td>${ rental.rental_time }</td>
+				<td>${ rental.discount_percent }</td>
+				<td>${ rental.Organization_id }</td>
+				<td>${ rental.Person_id }</td>
+				<td>${ rental.Agent_id }</td>
+				<td><a href="/homepage/rental.edit/${ rental.id }">Edit</a> | <a href="/homepage/rental.delete/${ rental.id }/">Delete</a></td>
+				</tr>
+			%endfor
+		</table>
+	</div>
+ </%block>
+</body>
+</html>
+

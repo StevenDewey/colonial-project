@@ -1,0 +1,43 @@
+<%inherit file="base.htm" />
+
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<title></title>
+</head>
+<body>
+
+<%block name="centerContent">
+<div class="text-right">
+		<a href="/homepage/event.create/" class="btn btn-warning" style="margin-bottom: 10px">Create New Event</a>
+</div>
+	<div class="tableContain">
+	<h1>Events</h1>
+		<table class="table table-hover table-bordered table-responsive">
+		<th>ID</th>
+		<th>Start Date</th>
+		<th>End Date</th>
+		<th>Map File Name</th>
+		<th>Edit | Delete</th>
+		
+			%for event in events:
+				
+				<tr>
+				<td>${ event.id }</td>
+				<td>${ event.name }</td>
+				<td>${ event.description }</td>
+				<td>${ event.start_date }</td>
+				<td>${ event.end_date }</td>
+				<td>${ event.map_file_name }</td>
+				<td>${ event.address }</td>
+				
+				<td><a href="/homepage/event.edit/${ event.id }">Edit</a> | <a href="/homepage/event.delete/${ event.id }/">Delete</a></td>
+				</tr>
+			%endfor
+		</table>
+	</div>
+ </%block>
+</body>
+</html>
+

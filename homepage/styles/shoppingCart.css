@@ -1,0 +1,13 @@
+.productstuff img {
+	max-height: 50px;
+	max-width: 50px;
+}
+
+img {
+	max-height: 50px;
+	max-width: 50px;
+}
+
+#id_quantity {
+	width:100px;
+}
